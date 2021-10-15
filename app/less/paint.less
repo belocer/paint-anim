@@ -1,0 +1,343 @@
+.paint__container {
+  height: 100vh;
+  width: 100vw;
+  //background: url(../img/dest/layergrey.webp) center center no-repeat no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  .paint__wrap {
+    transform: perspective(1200px) rotateY(0px);
+  }
+
+    .paint {
+    position: relative;
+    display: block;
+    margin: 100px auto 0;
+    /*width: 1024px;
+    height: 768px;*/
+    width: 45%;
+    height: 647px;
+    background: url(../img/dest/fraim.webp) center center no-repeat no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+    transform: perspective(1200px) translateZ(100px) translateY(0px);
+    overflow: hidden;
+    box-shadow: 0 0 20px #7f7f7f;
+    //animation: linear 3s swing_room;
+    perspective-origin: 30px;
+  }
+
+  .paint__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    filter: grayscale(100%);
+  }
+
+  // First horizon
+  .people1 {
+    z-index: 40;
+    transform: perspective(1200px) translateZ(-1128px) translateX(170px) translateY(552px);
+    filter: brightness(0.5);
+  }
+
+  .house3 {
+    z-index: 40;
+    transform: perspective(1200px) translateZ(-2300px) translateX(-890px) translateY(35px);
+    animation: ease-in-out infinite turn_left_house3 2s;
+  }
+
+  .house1 {
+    z-index: 40;
+    transform: perspective(1200px) translateZ(-1450px) translateX(669px) translateY(167px);
+    animation: ease-in-out infinite turn_left_house1 2s;
+  }
+
+  .cloud1 {
+    z-index: 40;
+    transform: perspective(1200px) translateZ(-540px) translateX(515px) translateY(-150px);
+    animation: ease-in-out infinite turn_left_cloud1 15s;
+  }
+
+  .balloon2 {
+    z-index: 40;
+    transform: perspective(1200px) translateZ(-600px) translateX(930px) translateY(175px);
+    animation: ease-in-out infinite turn_left_balloon2 6s;
+  }
+
+  // Second horizon
+  .birds {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-3400px) translateX(710px) translateY(-90px);
+    animation: ease-in-out infinite turn_left_birds 7s;
+  }
+
+  .cloud4 {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-2500px) translateX(-770px) translateY(-230px);
+    animation: ease-in-out infinite turn_left_cloud4 15s;
+  }
+
+  .people2 {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-4120px) translateX(177px) translateY(618px);
+    filter: brightness(0.5);
+  }
+
+  .house2 {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-2500px) translateX(-619px) translateY(110px);
+    animation: ease-in-out infinite turn_left_house2 2s;
+  }
+
+  .house4 {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-4000px) translateX(700px) translateY(147px);
+    animation: ease-in-out infinite turn_left_house4 2s;
+  }
+
+  .balloon1 {
+    z-index: 30;
+    transform: perspective(1200px) translateZ(-1200px) translateX(-83px) translateY(186px);
+    animation: ease-in-out infinite turn_left_balloon1 6s;
+  }
+
+  // Third horizon
+  .people4 {
+    z-index: 20;
+    transform: perspective(1200px) translateZ(-6100px) translateX(593px) translateY(508px);
+    filter: brightness(0.5);
+  }
+
+  .demon {
+    z-index: 20;
+    transform: perspective(1200px) translateZ(-3600px) translateX(536px) translateY(126px);
+  }
+
+  .tower {
+    z-index: 20;
+    transform: perspective(1200px) translateZ(-9000px) translateX(576px) translateY(-226px);
+  }
+
+  .house5 {
+    z-index: 20;
+    transform: perspective(1200px) translateZ(-7600px) translateX(-600px) translateY(62px);
+    animation: ease-in-out infinite turn_left_house5 2s;
+  }
+
+  .people3 {
+    z-index: 20;
+    transform: perspective(1200px) translateZ(-14900px) translateX(118px) translateY(414px) rotateY(0deg);
+    filter: brightness(0.5);
+    animation: ease-in-out turn_left_people3 10s forwards;
+  }
+
+  // Forth horizon
+  .castle {
+    z-index: 10;
+    transform: perspective(1200px) translateZ(-6300px) translateX(-269px) translateY(-182px);
+  }
+
+  .cloud3 {
+    z-index: 10;
+    transform: perspective(1200px) translateZ(-6100px) translateX(180px) translateY(-290px);
+    animation: ease-in-out infinite turn_left_cloud3 15s;
+  }
+
+  .tree1 {
+    z-index: 10;
+    transform: perspective(1200px) translateZ(-8700px) translateX(-797px) translateY(-121px);
+    filter: brightness(0.5);
+  }
+}
+
+@keyframes swing_room {
+  0% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0)
+  }
+
+  25% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(-1deg) rotateY(-1deg) rotateZ(-1deg)
+  }
+
+  50% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(0) rotateY(-2deg) rotateZ(0)
+  }
+
+  75% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(1deg) rotateY(2deg) rotateZ(1deg)
+  }
+
+  100% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0)
+  }
+}
+
+@keyframes zoom_pic {
+  0% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px);
+  }
+
+  50% {
+    transform: perspective(1200px) translateZ(1030px) translateY(70px);
+  }
+
+  /*100%{
+    transform: perspective(1200px) translateZ(1030px) translateY(70px);
+  }*/
+
+  100% {
+    transform: perspective(1200px) translateZ(100px) translateY(0px);
+  }
+}
+
+@keyframes turn_left_house1 {
+  0% {
+    transform: perspective(1200px) translateZ(-1450px) translateX(669px) translateY(167px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-1450px) translateX(669px) translateY(167px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-1450px) translateX(669px) translateY(167px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_house3 {
+  0% {
+    transform: perspective(1200px) translateZ(-2300px) translateX(-890px) translateY(35px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-2300px) translateX(-890px) translateY(35px) rotateY(10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-2300px) translateX(-890px) translateY(35px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_house2 {
+  0% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-619px) translateY(110px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-619px) translateY(110px) rotateY(10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-619px) translateY(110px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_house4 {
+  0% {
+    transform: perspective(1200px) translateZ(-4000px) translateX(700px) translateY(147px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-4000px) translateX(700px) translateY(147px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-4000px) translateX(700px) translateY(147px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_house5 {
+  0% {
+    transform: perspective(1200px) translateZ(-7600px) translateX(-600px) translateY(62px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-7600px) translateX(-600px) translateY(62px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-7600px) translateX(-600px) translateY(62px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_balloon1 {
+  0% {
+    transform: perspective(1200px) translateZ(-1200px) translateX(-83px) translateY(186px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-1200px) translateX(-183px) translateY(86px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-1200px) translateX(-83px) translateY(186px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_balloon2 {
+  0% {
+    transform: perspective(1200px) translateZ(-600px) translateX(930px) translateY(175px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-600px) translateX(1050px) translateY(150px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-600px) translateX(930px) translateY(175px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_cloud1 {
+  0% {
+    transform: perspective(1200px) translateZ(-540px) translateX(515px) translateY(-150px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-540px) translateX(1015px) translateY(-150px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-540px) translateX(515px) translateY(-150px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_cloud4 {
+  0% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-770px) translateY(-230px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-270px) translateY(-230px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-2500px) translateX(-770px) translateY(-230px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_cloud3 {
+  0% {
+    transform: perspective(1200px) translateZ(-6100px) translateX(180px) translateY(-290px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-6100px) translateX(680px) translateY(-290px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-6100px) translateX(180px) translateY(-290px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_birds {
+  0% {
+    transform: perspective(1200px) translateZ(-3400px) translateX(710px) translateY(-90px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(1200px) translateZ(-2400px) translateX(1510px) translateY(-90px) rotateY(-10deg);
+  }
+  100% {
+    transform: perspective(1200px) translateZ(-3400px) translateX(710px) translateY(-90px) rotateY(0deg);
+  }
+}
+
+@keyframes turn_left_people3 {
+  0% {
+    transform: perspective(1200px) translateZ(-14900px) translateX(118px) translateY(414px) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(1200px) translateZ(-16500px) translateX(100px) translateY(380px) rotateY(15deg);
+  }
+
+  100% {
+    transform: perspective(1200px) translateZ(-19500px) translateX(50px) translateY(340px) rotateY(-30deg);
+  }
+}
