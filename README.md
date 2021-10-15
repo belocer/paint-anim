@@ -1,4 +1,4 @@
-# gulp4 / Landing Page / WordPress
+# gulp4 / Animation paint
 
 ### Создать зависимости
 `npm i`
