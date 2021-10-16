@@ -6,12 +6,15 @@
   overflow: hidden;
 
   .paint__wrap {
-    transform: perspective(1200px) translateZ(0px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0);
+    margin-top: 0px;
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0);
+    //animation: ease-in-out MT 3s forwards;
+    //animation-delay: 10s;
   }
 
   .paint {
     position: relative;
-    z-index: 10;
+    z-index: 100;
     display: block;
     margin: 100px auto 0;
     /*width: 1024px;
@@ -21,10 +24,14 @@
     background: url(../img/dest/fraim.webp) center center no-repeat no-repeat;
     background-size: cover;
     transform-style: preserve-3d;
-    transform: perspective(1200px) translateZ(-300px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0);
+    transform: perspective(1200px) translateZ(100px) translateY(0px) rotateX(0) rotateY(0) rotateZ(0);
     overflow: hidden;
     box-shadow: 0 0 20px #7f7f7f;
-    animation: linear 4s swing_room forwards;
+    animation: linear 3s swing_room forwards;
+
+    .first_horizon {
+      z-index: 1;
+    }
   }
 
   .paint__img {
@@ -36,7 +43,7 @@
     display: inline-block;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
   }
 
   // First horizon
@@ -44,80 +51,80 @@
     z-index: 40;
     transform: perspective(1200px) translateZ(-2128px) translateX(-270px) translateY(552px);
     filter: brightness(0.5);
-    animation: ease-in-out turn_left_people1 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_people1;
     animation-delay: 1.5s;
   }
 
   .house3 {
     z-index: 40;
     transform: perspective(1200px) translateZ(-2300px) translateX(-1210px) translateY(35px);
-    animation: ease-in-out turn_left_house3 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_house3;
     animation-delay: 1.5s;
   }
 
   .house1 {
     z-index: 40;
     transform: perspective(1200px) translateZ(-1450px) translateX(900px) translateY(167px);
-    animation: ease-in-out turn_left_house1 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_house1;
     animation-delay: 1.5s;
   }
 
   .cloud1 {
     z-index: 40;
     transform: perspective(1200px) translateZ(-540px) translateX(915px) translateY(-150px);
-    animation: ease-in-out turn_left_cloud1 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_cloud1;
     animation-delay: 1.5s;
   }
 
   .balloon2 {
     z-index: 40;
     transform: perspective(1200px) translateZ(-600px) translateX(930px) translateY(175px);
-    animation: ease-in-out turn_left_balloon2 8s;
-    animation-delay: 1.5s;
+    animation: 10s ease-in-out 0s 1 forwards running move_balloon2;
+    animation-delay: 3s;
   }
 
   // Second horizon
   .birds {
     z-index: 30;
     transform: perspective(1200px) translateZ(-1400px) translateX(1510px) translateY(-90px) rotateY(-10deg);
-    animation: ease-in-out turn_left_birds 6s forwards;
-    animation-delay: 3s;
+    animation: 6s ease-in-out 0s 1 forwards running move_birds;
+    animation-delay: 7s;
   }
 
   .cloud4 {
     z-index: 30;
     transform: perspective(1200px) translateZ(-2500px) translateX(-1470px) translateY(-230px) rotateY(0deg);
-    animation: ease-in-out turn_left_cloud4 6s forwards;
-    animation-delay: 3s;
+    animation: 6s ease-in-out 0s 1 forwards running move_cloud4;
+    animation-delay: 4s;
   }
 
   .people2 {
     z-index: 30;
     transform: perspective(1200px) translateZ(-5120px) translateX(-277px) translateY(518px);
     filter: brightness(0.5);
-    animation: ease-in-out turn_left_people2 6s forwards;
-    animation-delay: 3s;
+    animation: 6s ease-in-out 0s 1 forwards running move_people2;
+    animation-delay: 4s;
   }
 
   .house2 {
     z-index: 30;
     transform: perspective(1200px) translateZ(-2500px) translateX(-819px) translateY(110px);
-    animation: ease-in-out turn_left_house2 6s forwards;
-    animation-delay: 3s;
+    animation: 6s ease-in-out 0s 1 forwards running move_house2;
+    animation-delay: 4s;
   }
 
   .house4 {
     z-index: 30;
     transform: perspective(1200px) translateZ(-4000px) translateX(1130px) translateY(147px);
-    animation: ease-in-out turn_left_house4 6s forwards;
-    animation-delay: 3s;
+    animation: 6s ease-in-out 0s 1 forwards running move_house4;
+    animation-delay: 4s;
   }
 
   .balloon1 {
     z-index: 30;
     transform: perspective(1200px) translateZ(-1200px) translateX(-83px) translateY(186px);
-    animation: ease-in-out turn_left_balloon1 8s;
-    animation-delay: 3s;
+    animation: 10s ease-in-out 0s 1 forwards running move_balloon1;
+    animation-delay: 5s;
   }
 
   // Third horizon
@@ -125,29 +132,29 @@
     z-index: 20;
     transform: perspective(1200px) translateZ(-7100px) translateX(1453px) translateY(398px);
     filter: brightness(0.5);
-    animation: ease-in-out turn_left_people4 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_people4;
     animation-delay: 5s;
   }
 
   .demon {
     z-index: 20;
-    transform: perspective(1200px) translateZ(-6900px) translateX(1276px) translateY(326px) rotateY(45deg);
-    animation: ease-in-out turn_left_demon 6s forwards;
-    animation-delay: 5s;
+    transform: perspective(1200px) translateZ(-8900px) translateX(1576px) translateY(126px) rotateY(0deg);
+    animation: 6s ease-in-out 0s 1 forwards running move_demon;
+    animation-delay: 7s;
   }
 
   .tower {
     z-index: 20;
     transform: perspective(1200px) translateZ(-9000px) translateX(1576px) translateY(-226px) skewX(0deg);
-    animation: ease-in-out turn_left_tower 6s forwards;
-    animation-delay: 5s;
+    animation: 6s ease-in-out 0s 1 forwards running move_tower;
+    animation-delay: 7s;
   }
 
   .house5 {
     z-index: 20;
-    transform: perspective(1200px) translateZ(-7600px) translateX(-1300px) translateY(62px);
-    animation: ease-in-out turn_left_house5 6s forwards;
-    animation-delay: 5s;
+    transform: perspective(1200px) translateZ(-7600px) translateX(-1100px) translateY(62px) rotateY(0deg);
+    animation: 6s ease-in-out 0s 1 forwards running move_house5;
+    animation-delay: 7s;
   }
 
 
@@ -155,30 +162,31 @@
     z-index: 20;
     transform: perspective(1200px) translateZ(-14900px) translateX(118px) translateY(414px) rotateY(0deg);
     filter: brightness(0.5);
-    animation: ease-in-out turn_left_people3 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_people3;
     animation-delay: 8s;
   }
 
   // Forth horizon
   .castle {
     z-index: 10;
-    transform: perspective(1200px) translateZ(-8300px) translateX(-269px) translateY(-182px);
-    animation: ease-in-out turn_left_castle 6s forwards;
+    transform: perspective(1200px) translateZ(-10300px) translateX(-169px) translateY(-182px);
+    animation: 6s ease-in-out 0s 1 forwards running move_castle;
     animation-delay: 7s;
   }
 
   .cloud3 {
     z-index: 10;
     transform: perspective(1200px) translateZ(-8100px) translateX(-1080px) translateY(-290px) rotateY(0deg);
-    animation: ease-in-out turn_left_cloud3 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_cloud3;
     animation-delay: 7s;
   }
 
   .tree1 {
     z-index: 10;
-    transform: perspective(1200px) translateZ(-12700px) translateX(-997px) translateY(-121px);
+    transform: perspective(1200px) translateZ(-12700px) translateX(-997px) translateY(-121px) skewX(-14deg);
     filter: brightness(0.5);
-    animation: ease-in-out turn_left_tree1 6s forwards;
+    animation: 6s ease-in-out 0s 1 forwards running move_tree1;
     animation-delay: 7s;
   }
 }
+
