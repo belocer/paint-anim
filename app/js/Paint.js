@@ -1,25 +1,26 @@
 let paint = document.querySelector('.paint');
 let paint__wrap = document.querySelector('.paint__wrap');
 
-let x = -300
-let y = 70
-let z = 0
+let z = 100
+let y = 0
 
-let intervalTransform = setInterval(function () {
-    x += 9;
-    y -= 0.5;
+setTimeout(() => {
+    let intervalTransform = setInterval(function () {
+        z += 8;
+        y -= 0.3;
 
-    if (x < 1100) {
-        paint.style.transform = `perspective(1200px) translateZ(${x}px) translateY(${y}px)`;
-        /*if(z < 15) {
-            z += 0.5;
-            paint.style.transform = `perspective(1200px) translateZ(${x}px) translateY(${y}px) rotateY(${z}deg`
+        if (z < 1100) {
+            paint__wrap.style.transform = `perspective(1200px) translateZ(${z}px) translateY(${y}px) rotateX(0) rotateY(0) rotateZ(0)`;
+            /*if(z < 15) {
+                z += 0.5;
+                paint.style.transform = `perspective(1200px) translateZ(${x}px) translateY(${y}px) rotateY(${z}deg`
+            } else {
+                z - 15;
+                paint.style.transform = `perspective(1200px) translateZ(${x}px) translateY(${y}px) rotateY(${z}deg`
+            }*/
+            //paint__wrap.style.transform = `perspective(1200px) rotateY(${z}deg)`
         } else {
-            z - 15;
-            paint.style.transform = `perspective(1200px) translateZ(${x}px) translateY(${y}px) rotateY(${z}deg`
-        }*/
-        //paint__wrap.style.transform = `perspective(1200px) rotateY(${z}deg)`
-    } else {
-        clearInterval(intervalTransform)
-    }
-}, 35)
+            clearInterval(intervalTransform)
+        }
+    }, 35)
+}, 6000)
